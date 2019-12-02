@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/line1">
+
+    <ImageView
+
+        android:id="@+id/belowbackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|fill_vertical"
+        android:paddingTop="60dp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btn_del"
+
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+
+            android:background="@color/colorsave"
+            android:hint="删除"
+            android:textColorHint="@drawable/red"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/colorsave"
+            android:hint="@string/save"
+            android:textAlignment="center"
+            android:textColorHint="@drawable/white"
+            android:textSize="17dp" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

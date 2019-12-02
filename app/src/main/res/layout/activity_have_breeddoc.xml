@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlackblue">
+    <TableLayout
+        android:id="@+id/top_tab"
+        android:backgroundTint="@color/colorBlackblue"
+        android:background="@color/top_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/farmerdoc_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_return"
+                android:layout_marginLeft="16dp"/>
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:textSize="24dp"
+                android:hint="@string/farmerdoc"
+                android:textColorHint="@color/colorwhite"/>
+        </LinearLayout>
+    </TableLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/R1"
+                android:background="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/头像"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="320dp"
+                    android:layout_toRightOf="@+id/用户名"
+                    android:background="@drawable/cio_head" />
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_below="@+id/用户名"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@drawable/white"
+                    android:textSize="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:hint="欢迎来到我家"/>
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/bg03"
+                android:layout_below="@+id/R1"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/bg03"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+            <ImageView
+                android:id="@+id/bg04"
+                android:layout_below="@id/bg03"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg04"/>
+            <LinearLayout
+                android:id="@+id/liner1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@color/colorBlack"
+                android:layout_below="@+id/bg04"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recbreeds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/bg05"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/liner1"
+                android:background="@drawable/bg05"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+            <TextView
+                android:id="@+id/text01"
+                android:layout_below="@id/bg05"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorBlack"/>
+            <LinearLayout
+                android:id="@+id/liner2"
+                android:layout_below="@id/text01"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_action_msg"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:hint="养殖数据统计"
+                    android:textColorHint="@color/afterSelector"
+                    android:textSize="16dp" />
+            </LinearLayout>
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_rae"
+                android:layout_below="@id/liner2"
+                android:layout_width="match_parent"
+                android:background="@color/colorBlack"
+                android:layout_height="wrap_content"
+                app:tabSelectedTextColor="@color/afterSelector"
+                app:tabMode="scrollable"/>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_rae"
+                android:layout_below="@+id/tab_rae"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"/>
+
+            <FrameLayout
+                android:background="@drawable/bg"
+                android:layout_below="@id/vp_rae"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/creadBreedDoc"
+                    android:text="新建养殖档案"
+                    android:textSize="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/afterSelector"
+                    android:textColor="@drawable/white"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="80dp"/>
+                <TextView
+                    android:id="@+id/aqtcompanysupport"
+                    android:textColor="@color/afterSelector"
+                    android:layout_marginTop="170dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/company_support"/>
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

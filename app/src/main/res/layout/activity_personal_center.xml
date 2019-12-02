@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackblue"
+        tools:context="com.example.fengtai.fragment.Fragment_personal_center">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lin_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/top_tab">
+        <TextView
+            android:layout_marginTop="17dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:hint="个人中心"
+            android:textColorHint="@drawable/white"
+            android:textSize="20dp"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:background="@drawable/bg01">
+
+        </ImageView>
+
+        <ImageView
+                android:id="@+id/userhead"
+                android:layout_width="378dp"
+                android:layout_height="199dp"
+                android:layout_marginLeft="17dp"
+                android:background="@drawable/point"/>
+
+        <ImageView
+                android:id="@+id/ic_head"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/cio_head"/>
+        <TextView
+                android:id="@+id/ic_head_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="105dp"
+                android:text="@string/head_name"
+                android:textSize="20dp"
+                android:textColor="@drawable/white"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="135dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/welcome_to"
+                android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="欢迎来到"
+                  android:textColor="@drawable/white" />
+            <TextView
+                android:id="@+id/perusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@drawable/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="的牧场"
+                android:textColorHint="@drawable/white" />
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+          android:id="@+id/bttn_find"
+          android:paddingLeft="18dp"
+          android:paddingRight="18dp"
+          android:background="@color/colorBlack"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_marginStart="17dp"
+          android:layout_marginEnd="17dp"
+          android:drawableLeft="@drawable/ic_me_find"
+          android:drawableRight="@drawable/ic_next_page"/>
+
+        <TextView
+                android:layout_gravity="center_vertical"
+                android:textSize="17dp"
+                android:layout_marginLeft="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/find"
+                android:textColorHint="@color/afterSelector"/>
+    </FrameLayout>
+    <FrameLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/bttn_my_msg"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:background="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:drawableLeft="@drawable/ic_me_msg"
+                android:drawableRight="@drawable/ic_next_page"/>
+
+        <TextView
+                android:layout_gravity="center_vertical"
+                android:textSize="17dp"
+                android:layout_marginLeft="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/my_msg"
+                android:textColorHint="@color/afterSelector"/>
+    </FrameLayout>
+    <FrameLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/bttn_about_us"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:background="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:drawableLeft="@drawable/ic_me_us"
+                android:drawableRight="@drawable/ic_next_page"/>
+
+        <TextView
+                android:layout_gravity="center_vertical"
+                android:textSize="17dp"
+                android:layout_marginLeft="75dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/about_us"
+                android:textColorHint="@color/afterSelector"/>
+    </FrameLayout>
+
+    <Button
+            android:id="@+id/bttn_quit"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:hint="@string/quit"
+            android:textColorHint="@drawable/white"
+            android:background="@color/read"
+            android:layout_height="wrap_content"/>
+
+    <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+        <ImageView
+
+                android:id="@+id/belowbackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/company_support"
+                android:textColorHint="@drawable/white"
+                android:textSize="12dp"
+                android:layout_marginTop="20dp"/>
+
+
+    </FrameLayout>
+
+</LinearLayout>

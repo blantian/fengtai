@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorBlackblue">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageButton
+            android:id="@+id/farmDoc_back"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_return"
+            android:layout_marginLeft="16dp"/>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:textSize="24dp"
+            android:hint="@string/topfarmdoc"
+            android:textColorHint="@color/colorwhite"/>
+    </LinearLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayoutdoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/read"
+        style="@style/MyTablayoutstyle"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabMinWidth="60dp"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_farm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

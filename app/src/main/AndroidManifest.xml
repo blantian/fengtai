@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fengtai">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_setting_config"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".activity.farmdoc.FDMemberActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activity.SplashActivity"
+           android:theme="@style/No_titel" >
+
+         </activity>
+          <!--//页面注册 -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.BottomNavigationActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.personalcenter.FindActivity" />
+        <activity android:name=".activity.SignUpActivity" />
+        <activity android:name=".activity.farmdoc.Farmdoc_Activity" />
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.farmdoc.FarmdocMainActivity" />
+        <activity android:name=".activity.farmdoc.FarmdocPersonalActivty" />
+        <activity android:name=".activity.breeddoc.BreedDetailActivity"/>
+        <activity android:name=".activity.breeddoc.HaveBreedsActivity"/>
+        <activity android:name=".activity.breeddoc.BreedActivity"/>
+        <activity android:name=".activity.breeddoc.AddBreedActivity"/>
+        <activity android:name=".activity.breeddoc.BreedsDocActivity"/>
+        <activity android:name=".activity.breeddoc.BreedsAllMessagesActivity" />
+        <activity android:name=".activity.breeddoc.GetBigPicActivity"/>
+        <activity android:name=".activity.personalcenter.PersonalActivity"/>
+        <activity android:name=".activity.personalcenter.FindDetailActivity"/>
+        <activity android:name=".activity.personalcenter.PersonalEditeMsgActivity"/>
+
+    </application>
+
+</manifest>

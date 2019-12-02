@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/next_page"
+        android:background="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <LinearLayout
+            android:id="@+id/lien2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/by_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购置时间:"
+            android:textColor="@color/afterSelector" />
+        <TextView
+            android:id="@+id/breeds_by_time"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/afterSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lien3"
+            android:layout_below="@id/lien2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/breed_head"
+            android:layout_marginLeft="30dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cio_head"/>
+        <TextView
+            android:id="@+id/breed_name"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:text="猪猪"
+            android:textColor="@color/afterSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_weight="5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_next_page" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lien4"
+            android:layout_below="@id/lien3"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:textColor="@color/afterSelector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/breed_number"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="@color/afterSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"/>
+        <TextView
+            android:id="@+id/ge"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="个"
+            android:textColor="@color/afterSelector"/>
+            <TextView
+                android:layout_weight="1"
+                android:textColor="@color/afterSelector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/breedincomename"
+            android:layout_weight="1"
+            android:text="预计收入："
+            android:gravity="end|center_horizontal"
+            android:textColor="@color/afterSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/breed_priess"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1500.00"
+            android:textColor="@color/afterSelector"/>
+        <TextView
+            android:layout_below="@+id/breed_name"
+            android:layout_weight="1"
+            android:textColor="@color/afterSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"/>
+            <TextView
+                android:layout_weight="1"
+                android:textColor="@color/afterSelector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

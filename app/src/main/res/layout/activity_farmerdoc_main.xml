@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlackblue"
+    android:orientation="vertical">
+
+    <TableLayout
+        android:id="@+id/top_tab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/top_tab"
+        android:backgroundTint="@color/colorBlackblue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp">
+
+            <ImageButton
+                android:id="@+id/farmerdoc_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/ic_return" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="110dp"
+                android:hint="@string/farmerdoc"
+                android:textColorHint="@color/colorwhite"
+                android:textSize="24dp" />
+        </LinearLayout>
+    </TableLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="always"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/R1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBlack">
+
+                <TextView
+                    android:id="@+id/用户名"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="用户名"
+                    android:textColor="@drawable/white"
+                    android:textSize="25dp" />
+
+                <ImageView
+                    android:id="@+id/头像"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/cio_head" />
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/用户名"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="7dp"
+                    android:hint="欢迎来到我家"
+                    android:textColorHint="@drawable/white"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/bg03"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/R1"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/bg03" />
+
+            <ImageView
+                android:id="@+id/bg04"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@id/bg03"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg04" />
+
+            <LinearLayout
+                android:id="@+id/liner1"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/bg04"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/colorBlack"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btn_member"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg02"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_geren" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="12dp"
+                        android:textColor="@color/afterSelector"
+                        android:text="人口"
+                        android:textColorHint="@drawable/white" />
+
+                    <TextView
+                        android:id="@+id/人口"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="12dp"
+                        android:textColor="@color/afterSelector"
+                        android:textColorHint="@drawable/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_total"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg02"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_add" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="收支总汇"
+                        android:textColor="@color/afterSelector"
+                        android:textSize="12dp"
+                        android:textColorHint="@drawable/white" />
+
+                    <TextView
+                        android:id="@+id/收支总汇"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/afterSelector"
+                        android:textSize="12dp"
+                        android:textColorHint="@drawable/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_area"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg02"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_minaji" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="12dp"
+                        android:text="草原面积"
+                        android:textColor="@color/afterSelector"
+                        android:textColorHint="@drawable/white" />
+
+                    <TextView
+                        android:id="@+id/草原面积"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="12dp"
+                        android:textColor="@color/afterSelector"
+                        android:textColorHint="@drawable/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_compensate"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bg02"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_butie" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/afterSelector"
+                        android:text="补贴"
+                        android:textSize="12dp"
+                        android:textColorHint="@drawable/white" />
+
+                    <TextView
+                        android:id="@+id/补贴"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/afterSelector"
+                        android:textSize="12dp"
+                        android:textColorHint="@drawable/white" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/bg05"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/liner1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg05" />
+
+            <TextView
+                android:id="@+id/text01"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/bg05"
+                android:background="@color/colorBlack" />
+
+            <LinearLayout
+                android:id="@+id/liner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text01"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/ic_action_msg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:hint="收入支出"
+                    android:textColorHint="@color/afterSelector"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_rae"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/liner2"
+                android:background="@color/colorBlack"
+                app:tabSelectedTextColor="@color/afterSelector" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_rae"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_below="@+id/tab_rae"
+                android:background="@color/colorBlack" />
+
+            <LinearLayout
+                android:id="@+id/liner3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vp_rae"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/ic_action_msg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:hint="经营草原面积"
+                    android:textColorHint="@color/afterSelector"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/liner3"
+                android:background="@color/colorBlack"
+                app:tabSelectedTextColor="@color/afterSelector" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_area"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_below="@+id/tab_area" />
+
+            <LinearLayout
+                android:id="@+id/liner4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vp_area"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/ic_action_msg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:hint="牧户各类补贴"
+                    android:textColorHint="@color/afterSelector"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_compensate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/liner4"
+                android:background="@color/colorBlack"
+                app:tabSelectedTextColor="@color/afterSelector" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_compensate"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/tab_compensate" />
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

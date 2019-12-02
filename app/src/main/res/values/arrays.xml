@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="relation">
+        <item>户主</item>
+        <item>妻子</item>
+        <item>儿子</item>
+        <item>女儿</item>
+    </string-array>
+    <string-array name="force">
+        <item>是</item>
+        <item>否</item>
+    </string-array>
+    <string-array name="sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    <string-array name="steType">
+        <item>操场</item>
+        <item>林地</item>
+    </string-array>
+    <string-array name="steStatus">
+        <item>自用</item>
+        <item>出租</item>
+        <item>闲置</item>
+    </string-array>
+    <string-array name="classify">
+        <item>家禽</item>
+        <item>猪</item>
+        <item>山羊</item>
+        <item>绵羊</item>
+        <item>骆驼</item>
+        <item>马</item>
+    </string-array>
+    <string-array name="adress_provinces">
+        <item>北京市</item>
+        <item>内蒙古自治区</item>
+    </string-array>
+    <string-array name="adress_citys">
+        <item>呼和浩特市</item>
+        <item>赤峰市</item>
+        <item>鄂尔多斯市</item>
+    </string-array>
+    <string-array name="adress_countys">
+        <item>巴林右旗</item>
+        <item>巴林左旗</item>
+    </string-array>
+    <string-array name="breed">
+        <item>鄂尔多斯细毛羊</item>
+        <item>阿尔卑斯白绒山羊</item>
+    </string-array>
+    <string-array name="supplier">
+        <item>牧户</item>
+        <item>好力保</item>
+    </string-array>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorBlackblue"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_fenge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:hint="数据统计日期："
+            android:textColorHint="@color/afterSelector"/>
+        <TextView
+            android:id="@+id/dateRange"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/afterSelector"
+            android:hint="2019-11-01~2019-11-30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:id="@+id/t_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="总收入"
+            android:textSize="16sp"
+            android:textColor="@color/afterSelector" />
+
+        <TextView
+            android:id="@+id/t_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:textSize="16sp"
+            android:hint="总支出"
+            android:textColor="@color/afterSelector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="16sp"
+            android:id="@+id/info_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="162000.00元"
+            android:textColor="@color/afterSelector" />
+
+        <TextView
+            android:id="@+id/info_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:hint="163200.00元"
+            android:textSize="16sp"
+            android:textColor="@color/afterSelector" />
+    </LinearLayout>
+
+</LinearLayout>

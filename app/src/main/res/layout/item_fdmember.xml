@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/colorBlack">
+
+    <TextView
+        android:id="@+id/tTab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center|start"
+        android:padding="10dp"
+        android:text="TextView"
+        android:textColor="@color/afterSelector"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableEnd="@drawable/ic_next_page"
+        android:drawableRight="@drawable/ic_next_page"
+        android:gravity="center|end"
+        android:padding="10dp"
+        android:text="TextView"
+        android:textAlignment="textEnd"
+        android:textColor="@color/afterSelector"
+        android:textSize="17sp" />
+</LinearLayout>

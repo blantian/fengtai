@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBlackblue">#0A2C40</color>
+    <color name="colorwhite">#FFFFFF</color>
+    <color name="top_tab">#FF004E79</color>
+    <color name="colorBlack">#062034</color>
+    <color name="colorbutton">#13586F</color>
+    <color name="colorTextGrey">#aaaaaa</color>
+    <color name="dodgerblue">#1e90ff</color><!--闪兰色 -->
+    <color name="beforSelector">#FBFBFD</color>
+    <color name="afterSelector">#2BF3DF</color>
+    <color name="tabcolor">#FF0B1E30</color>
+   <color name="colorselector">#0EBBCB</color>
+    <color name="read">#FF3333</color>
+    <color name="colorsave">#26C6DA</color>
+    <color name="coloridtext">#2980B9</color>
+
+</resources>

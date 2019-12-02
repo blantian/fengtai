@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBlackblue">
+    <TableLayout
+            android:id="@+id/top_tab"
+            android:background="@color/top_tab"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+        <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+            <ImageButton
+                    android:id="@+id/back_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_return"
+                    android:layout_marginLeft="16dp"/>
+            <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:textSize="24dp"
+                    android:hint="@string/about_as"
+                    android:textColorHint="@color/colorwhite"/>
+        </LinearLayout>
+
+    </TableLayout>
+   <android.support.v4.widget.NestedScrollView
+           android:layout_below="@+id/top_tab"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+       <LinearLayout
+               android:id="@+id/line1"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+           <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="140dp"
+                   android:background="@drawable/bg01"/>
+           <ImageView
+                   android:layout_marginTop="-140dp"
+                   android:layout_width="378dp"
+                   android:layout_height="199dp"
+                   android:background="@drawable/point"
+                   android:layout_gravity="center"/>
+           <ImageView
+                   android:layout_gravity="center"
+                   android:layout_width="280dp"
+                   android:layout_height="80dp"
+                   android:layout_marginTop="-145dp"
+                   android:background="@drawable/logo_white"/>
+
+           <EditText
+                   android:id="@+id/about_as_location"
+                   android:layout_width="378dp"
+                     android:layout_height="48dp"
+                     android:layout_marginLeft="17dp"
+                     android:layout_marginTop="100dp"
+                     android:drawableLeft="@drawable/ic_action_location"
+                     android:paddingLeft="15dp"
+                     android:background="@color/colorBlack"/>
+
+           <EditText
+                   android:id="@+id/about_as_Uname"
+                   android:layout_width="378dp"
+                     android:layout_height="48dp"
+                     android:layout_marginLeft="17dp"
+                     android:layout_marginTop="6dp"
+                     android:drawableLeft="@drawable/ic_action_name"
+                     android:paddingLeft="15dp"
+                     android:background="@color/colorBlack"/>
+           <EditText
+                   android:id="@+id/about_as_phone"
+                   android:layout_width="378dp"
+                   android:layout_height="48dp"
+                   android:layout_marginLeft="17dp"
+                   android:layout_marginTop="6dp"
+                   android:drawableLeft="@drawable/ic_action_about_phone"
+                   android:paddingLeft="15dp"
+                   android:background="@color/colorBlack"/>
+           <LinearLayout
+                   android:orientation="horizontal"
+                   android:layout_marginLeft="17dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+           <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/ic_action_service"/>
+               <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:hint="@string/service"
+                       android:layout_gravity="center_vertical"
+                       android:textColorHint="@color/colorselector"
+                       android:layout_marginLeft="10dp"/>
+           </LinearLayout>
+
+           <TextView
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="500dp"
+                   android:layout_marginStart="17dp"
+                   android:layout_marginEnd="17dp"
+                   android:background="@color/colorBlack"/>
+
+           <ImageView
+                   android:layout_marginTop="50dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/bg"/>
+           <TextView
+                   android:layout_gravity="center"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:hint="@string/company_support"
+                   android:textColorHint="@drawable/white" android:layout_marginTop="-130dp"/>
+
+
+       </LinearLayout>
+
+   </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
