@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide;
 import com.example.fengtai.entity.Region;
 import com.example.fengtai.util.APIService;
 import com.example.fengtai.util.AddressUtil;
-import com.example.fengtai.util.Constants;
+import com.example.fengtai.database.Constants;
 import com.isseiaoki.simplecropview.FreeCropImageView;
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.loader.ImageLoader;
@@ -39,6 +39,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MyApplication extends Application {
 
+    private Context context;
+    //用户ID
+    public static String userId ;
+
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
+
     //创建Retrofit对象
     private final static Retrofit retrofit = new Retrofit.Builder()
             .baseUrl(Constants.URL) // 设置 网络请求 Url
@@ -51,17 +61,15 @@ public class MyApplication extends Application {
                     .retryOnConnectionFailure(true)
                     .build())
             .build();
-    //用户ID
-    public static String userId ;
-
     public static APIService API = retrofit.create(APIService.class);
+
+
     //全局获取三级地址
     public static List<Region> address = new AddressUtil().initData().getList();
 
     //static 代码段可以防止内存泄露
     static {
         new AddressUtil().initData();
-
         //设置全局的Header构建器
         SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
             @NotNull
@@ -118,4 +126,7 @@ public class MyApplication extends Application {
         imagePicker.setOutPutY(1000);//保存文件的高度。单位像素
     }
 
-}
+
+    }
+
+

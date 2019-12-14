@@ -42,14 +42,16 @@
                 android:id="@+id/scroll_body">
             <ImageView
                     android:id="@+id/back_g"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:background="@drawable/bg01"/>
 
             <ImageView
                 android:id="@+id/back_g1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_centerHorizontal="true"
-                android:layout_width="378dp"
+                android:layout_width="wrap_content"
                 android:layout_height="199dp"
                 android:layout_below="@id/lin_top"
                 android:layout_gravity="center"
@@ -57,10 +59,10 @@
                 tools:ignore="NotSibling" />
             <LinearLayout
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/username"
@@ -109,13 +111,13 @@
             <ImageView
                     android:layout_marginTop="30dp"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/bg"/>
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:layout_gravity="center_horizontal"
                         android:textSize="12sp"
                         android:text="@string/company_support"/>
             </FrameLayout>

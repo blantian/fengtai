@@ -1,20 +1,19 @@
 package com.example.fengtai.entity;
 
-public class UserInfoResult {
-
+public class UserDataBean {
 
         /**
-         * user_id : 29579
-         * username : lantian
+         * user_id : 29542
+         * username : 奇力格尔
          * password : fcea920f7412b5da7be0cf42b8c93759
-         * phone : 18204893804
-         * email : 1249361759@qq.com
+         * phone : 15847316516
+         * email :
          * nickname : null
          * sex : 1
-         * address : 呼和浩特
-         * id_card : 150423199410011439
-         * age : 10
-         * avatar : http://admin.fengtaiiot.com/uploadImage/5de215e5753ab.png
+         * address : 阿尔巴斯苏木乌兰其日嘎嘎查乌兰其日嘎小队
+         * id_card :
+         * age : 0
+         * avatar : null
          * open_id : null
          * user_api_key : null
          * company_api_key : null
@@ -29,21 +28,18 @@ public class UserInfoResult {
          * iot_password :
          * appkey :
          * appsecret :
-         * login_ip : null
-         * created_at : 2019-11-14 11:20:57
-         * updated_at : null
+         * login_ip : 1.27.51.56
+         * created_at : 2019-09-29 15:26:27
+         * updated_at : 2019-09-30 16:52:35
          * deleted_at : null
-         * xian : 204
-         * shi : 76
+         * xian : 95
+         * shi : 86
          * sheng : 66
          * address_id : null
-         * smx_id :
-         * smx_type : 1
-         * smx_ticket : null
-         * usertype_id : 0
-         * shengdata : 内蒙古自治区
-         * shidata : 赤峰市
-         * xiandata : 巴林右旗
+         * smx_id : -1
+         * smx_type : 2
+         * smx_ticket :
+         * usertype_id : 29480
          */
 
         private String user_id;
@@ -56,7 +52,7 @@ public class UserInfoResult {
         private String address;
         private String id_card;
         private String age;
-        private String avatar;
+        private Object avatar;
         private Object open_id;
         private Object user_api_key;
         private Object company_api_key;
@@ -71,9 +67,9 @@ public class UserInfoResult {
         private String iot_password;
         private String appkey;
         private String appsecret;
-        private Object login_ip;
+        private String login_ip;
         private String created_at;
-        private Object updated_at;
+        private String updated_at;
         private Object deleted_at;
         private String xian;
         private String shi;
@@ -81,11 +77,8 @@ public class UserInfoResult {
         private Object address_id;
         private String smx_id;
         private String smx_type;
-        private Object smx_ticket;
+        private String smx_ticket;
         private String usertype_id;
-        private String shengdata;
-        private String shidata;
-        private String xiandata;
 
         public String getUser_id() {
             return user_id;
@@ -167,11 +160,11 @@ public class UserInfoResult {
             this.age = age;
         }
 
-        public String getAvatar() {
+        public Object getAvatar() {
             return avatar;
         }
 
-        public void setAvatar(String avatar) {
+        public void setAvatar(Object avatar) {
             this.avatar = avatar;
         }
 
@@ -287,11 +280,11 @@ public class UserInfoResult {
             this.appsecret = appsecret;
         }
 
-        public Object getLogin_ip() {
+        public String getLogin_ip() {
             return login_ip;
         }
 
-        public void setLogin_ip(Object login_ip) {
+        public void setLogin_ip(String login_ip) {
             this.login_ip = login_ip;
         }
 
@@ -303,11 +296,11 @@ public class UserInfoResult {
             this.created_at = created_at;
         }
 
-        public Object getUpdated_at() {
+        public String getUpdated_at() {
             return updated_at;
         }
 
-        public void setUpdated_at(Object updated_at) {
+        public void setUpdated_at(String updated_at) {
             this.updated_at = updated_at;
         }
 
@@ -367,11 +360,11 @@ public class UserInfoResult {
             this.smx_type = smx_type;
         }
 
-        public Object getSmx_ticket() {
+        public String getSmx_ticket() {
             return smx_ticket;
         }
 
-        public void setSmx_ticket(Object smx_ticket) {
+        public void setSmx_ticket(String smx_ticket) {
             this.smx_ticket = smx_ticket;
         }
 
@@ -381,30 +374,6 @@ public class UserInfoResult {
 
         public void setUsertype_id(String usertype_id) {
             this.usertype_id = usertype_id;
-        }
-
-        public String getShengdata() {
-            return shengdata;
-        }
-
-        public void setShengdata(String shengdata) {
-            this.shengdata = shengdata;
-        }
-
-        public String getShidata() {
-            return shidata;
-        }
-
-        public void setShidata(String shidata) {
-            this.shidata = shidata;
-        }
-
-        public String getXiandata() {
-            return xiandata;
-        }
-
-        public void setXiandata(String xiandata) {
-            this.xiandata = xiandata;
         }
 
 }

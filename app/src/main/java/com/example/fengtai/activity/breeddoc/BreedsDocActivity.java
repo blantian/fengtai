@@ -29,7 +29,6 @@ public class BreedsDocActivity extends AppCompatActivity {
 
     private String id;
     private TextView showDocname;
-
     private Button button;
 
     @Override

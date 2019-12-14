@@ -3,6 +3,7 @@ package com.example.fengtai.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -31,64 +32,35 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeViewHolder> {
-    //icons titles必须一一对应
-    private final int[] icons = new int[]{R.drawable.ic_action_watching, R.drawable.ic_action_statellite, R.drawable.ic_farmer_doc, R.drawable.ic_plant_doc, R.drawable.ic_medicine_doc, R.drawable.ic_farm_doc};
-    private final String[] titles = new String[]{"监控中心", "卫星放牧", "牧户档案", "  种植档案", "医疗档案", "养殖档案"};
+
     private ArrayList<HomeResult> list;
+    private ArrayList<String> pic;
     private List<BreedsResult> breedsResults = new ArrayList<>();
-
     private Context context;
-
+    private String path;//要获取的路径
+    private Handler mHandler = new Handler();
 
     public HomeListAdapter(ArrayList<HomeResult> list, Context context) {
         this.list = list;
         this.context = context;
-        //在网络数据之后添加
-        for (int i = 0; i < icons.length; i++) {
-            HomeResult result = new HomeResult();
-            //可在此添加id
-            result.setProduct_icon(icons[i]);
-            result.setProduct_name(titles[i]);
-            if (i==0){
-                result.setProduct_id(0 +"");
-            }
-            if ( i == 1){
-                result.setProduct_id(1+"");
-            }
-            if (i==2){
-                result.setProduct_id(2+"");
-            }
-            if (i==3){
-                result.setProduct_id(3+"");
-            }
-            if ((i==4)){
-                result.setProduct_id(4+"");
-            }
-            if (i == 5) {
-                result.setProduct_id(5 + "");
-            }
-            list.add(result);
-        }
+
     }
+
+
 
     @NonNull
     @Override
     public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_home, viewGroup, false);
         return new HomeViewHolder(v);
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull HomeViewHolder holder, int i) {
         final HomeResult item = list.get(i);
-
-        //唯一需要替换的是图片获取方式
-        if (i >= list.size() - icons.length) {
-            holder.icon.setImageResource(item.getProduct_icon());
-        } else {
-            Glide.with(context).load(item.getProduct_pic()).into(holder.icon);
-        }
-
+        //todo 渲染主页
+        Glide.with(context).load(item.getProduct_pic()).into(holder.icon);
         holder.name.setText(item.getProduct_name());
         holder.icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -208,4 +180,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.HomeVi
         }
 
     }
+
+
+
 }

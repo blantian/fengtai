@@ -1,5 +1,6 @@
 package com.example.fengtai.fragment;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -36,34 +37,7 @@ public class Fragment_pasture extends Fragment {
         super.onStart();
         farmUsername = getView().findViewById(R.id.farmusername);
         farmLiusername = getView().findViewById(R.id.farmliusername);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
 
-                try {
-                    Thread.sleep(0);
-                    mHandler.post(new Runnable() {
-                        @Override
-                        public void run() {
-                            MyApplication.API.getUserInfo(MyApplication.userId).enqueue(new Callback<Result<UserInfoResult>>() {
-                                @Override
-                                public void onResponse(Call<Result<UserInfoResult>> call, Response<Result<UserInfoResult>> response) {
-                                    farmUsername.setText(response.body().getData().getUsername());
-                                    farmLiusername.setText(response.body().getData().getUsername());
-                                }
-
-                                @Override
-                                public void onFailure(Call<Result<UserInfoResult>> call, Throwable t) {
-
-                                }
-                            });
-                        }
-                    });
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
     }
 
 }

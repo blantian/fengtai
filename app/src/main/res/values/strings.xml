@@ -9,7 +9,7 @@
     <string name="company_support">阿启泰技术支持</string>
     <string name="input_name">用户名/电话号码</string>
     <string name="input_password">密码</string>
-    <string name="bind">绑定</string>
+    <string name="bind">登录</string>
     <string name="sign_bttn">注册</string>
     <string name="agree_deal">我同意条款内容</string>
     <string name="check_file">查看条款内容</string>

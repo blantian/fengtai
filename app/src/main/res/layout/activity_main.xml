@@ -40,5 +40,5 @@
             android:elevation="8dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:src="@drawable/tab_myfarm"/>
+            android:background="@drawable/tab_myfarm"/>
 </RelativeLayout>

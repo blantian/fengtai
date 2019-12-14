@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fengtai">
 
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application
         android:name=".MyApplication"
@@ -34,9 +37,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.BottomNavigationActivity" />
-        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.login.LoginActivity" />
         <activity android:name=".activity.personalcenter.FindActivity" />
-        <activity android:name=".activity.SignUpActivity" />
+        <activity android:name=".activity.login.SignUpActivity" />
         <activity android:name=".activity.farmdoc.Farmdoc_Activity" />
         <activity android:name=".activity.AboutUsActivity" />
         <activity android:name=".activity.farmdoc.FarmdocMainActivity" />
@@ -51,6 +54,7 @@
         <activity android:name=".activity.personalcenter.PersonalActivity"/>
         <activity android:name=".activity.personalcenter.FindDetailActivity"/>
         <activity android:name=".activity.personalcenter.PersonalEditeMsgActivity"/>
+        <activity android:name=".activity.login.RemakePassActivity"/>
 
     </application>
 

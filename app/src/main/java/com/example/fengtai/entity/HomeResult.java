@@ -1,5 +1,6 @@
 package com.example.fengtai.entity;
 
+
 public class HomeResult {
 
     /**
@@ -35,14 +36,6 @@ public class HomeResult {
     private String created_at;
     private String updated_at;
     private Object deleted_at;
-    private int product_icon;
-
-    public void setProduct_icon(int product_icon){
-        this.product_icon = product_icon;
-    }
-    public int getProduct_icon() {
-        return product_icon;
-    }
 
     public String getProduct_id() {
         return product_id;
@@ -163,4 +156,5 @@ public class HomeResult {
     public void setDeleted_at(Object deleted_at) {
         this.deleted_at = deleted_at;
     }
+
 }

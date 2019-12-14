@@ -1,5 +1,4 @@
 package com.example.fengtai.entity.base;
-
 public class Result<T> {
 
 
@@ -13,7 +12,6 @@ public class Result<T> {
     private String message;
     private T data;
     private int code;
-
     private PageBean page;
 
     public int getStatus() {
@@ -57,6 +55,7 @@ public class Result<T> {
     public void setPage(PageBean page) {
         this.page = page;
     }
+
 
     public static class PageBean {
         /**

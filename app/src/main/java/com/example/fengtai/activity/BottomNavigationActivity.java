@@ -2,10 +2,12 @@ package com.example.fengtai.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -15,8 +17,6 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import com.example.fengtai.R;
 import com.example.fengtai.adapter.BottomNavigationAdapter;
 import com.example.fengtai.fragment.Fragment_home;
@@ -39,8 +39,6 @@ public class BottomNavigationActivity extends AppCompatActivity
         implements BottomNavigationView.OnNavigationItemSelectedListener,
         ViewPager.OnPageChangeListener, ViewPager.OnTouchListener, ViewPager.OnClickListener {
 
-    FloatingActionButton floatingActionButton;
-    BottomNavigationView bnve;
 
     @BindView(R.id.btn_navigation_view)
     BottomNavigationView bottomNavigationView;
@@ -61,6 +59,7 @@ public class BottomNavigationActivity extends AppCompatActivity
     private long mExitTime;
     private Fragment fragment_now = null;
     private int pos = -1;
+    private int num = 0;
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
@@ -72,7 +71,7 @@ public class BottomNavigationActivity extends AppCompatActivity
         imageView.setOnClickListener(this);
     }
 
-    @SuppressLint("NewApi")
+    @SuppressLint({"NewApi", "ResourceType"})
     private void init() {
         fragmentList = new ArrayList<>();
         fragment_home = new Fragment_home();
@@ -98,7 +97,10 @@ public class BottomNavigationActivity extends AppCompatActivity
         bottomNavigationAdapter = new BottomNavigationAdapter(getSupportFragmentManager(), fragmentList);
         viewPager.setAdapter(bottomNavigationAdapter);
         viewPager.addOnPageChangeListener(this);
-
+        bottomNavigationView.setItemTextColor(null);
+        bottomNavigationView.setItemIconTintList(null);
+        Resources resources = getResources();
+        bottomNavigationView.setItemTextColor(resources.getColorStateList(R.drawable.selector_bottom_navigation,null));
 
     }
 
@@ -108,6 +110,7 @@ public class BottomNavigationActivity extends AppCompatActivity
         unbinder.unbind();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
@@ -116,18 +119,15 @@ public class BottomNavigationActivity extends AppCompatActivity
                 pos = 0;
                 break;
             case R.id.ma_iv_index:
-                // case R.id.navigation_pasture:
                 viewPager.setCurrentItem(1);
                 pos = 1;
                 break;
             case R.id.navigation_notifications:
                 viewPager.setCurrentItem(2);
-
                 break;
         }
         return true;
     }
-
 
     public void setBackground(List<Fragment> fragments, int position) {
 
@@ -139,10 +139,18 @@ public class BottomNavigationActivity extends AppCompatActivity
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onPageSelected(int position) {
-        Log.i("onPageSelected", String.valueOf(position));
+
         bottomNavigationView.getMenu().getItem(position).setChecked(true);
+        num = position;
+        if (num == 1) {
+            imageView.setBackground(getResources().getDrawable(R.drawable.tab_myfarm));
+        } else {
+            imageView.setBackground(getResources().getDrawable(R.drawable.tab_myfarm_hui));
+            imageView.getBackground().setAlpha(150);
+        }
     }
 
     @Override
@@ -172,16 +180,12 @@ public class BottomNavigationActivity extends AppCompatActivity
      * @param v The view that was clicked.
      */
 
+
     @Override
     public void onClick(View v) {
-        Toast.makeText(BottomNavigationActivity.this, "centent", Toast.LENGTH_LONG);
 
         viewPager.setCurrentItem(1);
         bottomNavigationView.getMenu().getItem(1).setChecked(true);
-
-        Log.d("click", "centent");
-        Log.d("pos", String.valueOf(pos));
-
 
     }
     @Override
@@ -212,11 +216,6 @@ public class BottomNavigationActivity extends AppCompatActivity
 
     }
 
-
-    //@Override
-    //public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-    //   return false;
-    //}
 }
 
 

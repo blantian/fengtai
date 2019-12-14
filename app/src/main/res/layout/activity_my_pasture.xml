@@ -35,15 +35,16 @@
 
 
         <ImageView
-                android:layout_width="378dp"
+                android:layout_width="match_parent"
                 android:layout_height="199dp"
-                android:layout_marginLeft="17dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
                 android:background="@drawable/bg06"/>
 
         <LinearLayout
             android:layout_marginTop="20dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -94,12 +95,12 @@
     <FrameLayout
                  android:layout_below="@+id/map"
                  android:layout_marginTop="80dp"
-                 android:layout_width="wrap_content"
+                 android:layout_width="match_parent"
                  android:layout_height="wrap_content">
     <ImageView
 
             android:id="@+id/belowbackground"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg"/>
         <TextView

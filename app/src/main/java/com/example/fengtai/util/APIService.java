@@ -1,5 +1,7 @@
 package com.example.fengtai.util;
 
+import com.example.fengtai.entity.GetMessageResylt;
+import com.example.fengtai.entity.RemakePassWord;
 import com.example.fengtai.entity.personalcenter.FindDetailResult;
 import com.example.fengtai.entity.personalcenter.FindResult;
 import com.example.fengtai.entity.HomeResult;
@@ -36,6 +38,11 @@ import retrofit2.http.Part;
 import retrofit2.http.PartMap;
 import retrofit2.http.Query;
 
+/*
+=================
+   API：get/post
+=================
+ */
 
 public interface APIService {
     //   登录
@@ -48,7 +55,14 @@ public interface APIService {
     @POST("Api/User/store")
     Call<Result<LoginResult>> enrollUser(@Part("username") RequestBody user, @Part("password") RequestBody password, @Part("phone") RequestBody phone);
 
+    //获取验证码
+    @GET("Api/Alisms/code.html")
+    Call<GetMessageResylt> getMessage(@Query("phone") String phone);
 
+    //重置密码
+    @Multipart
+    @POST("Api/ApiLogin/resetpassword")
+    Call<Result<RemakePassWord>> remakePass(@Part("phone") RequestBody phone,@Part("password") RequestBody password);
     //获取首页
     @Multipart
     @POST("Api/ApiDevices/product_index")

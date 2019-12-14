@@ -17,5 +17,6 @@
     <color name="read">#FF3333</color>
     <color name="colorsave">#26C6DA</color>
     <color name="coloridtext">#2980B9</color>
+    <color name="afterClick">#20444444</color>
 
 </resources>

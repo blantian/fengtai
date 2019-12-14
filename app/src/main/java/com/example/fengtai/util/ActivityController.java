@@ -2,6 +2,8 @@ package com.example.fengtai.util;
 
 import android.app.Activity;
 
+import com.example.fengtai.database.ACache;
+
 import java.util.ArrayList;
 import java.util.List;
 
